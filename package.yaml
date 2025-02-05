@@ -1,0 +1,59 @@
+name:                template-monomer-app
+version:             1.0.0.0
+github:              "Ordluks/template-monomer-app"
+license:             GPL-3.0-only
+author:              Ordluks
+
+synopsis:            "Starter Haskell project with Monomer GUI library"
+description:         Please see the README on GitHub at <https://github.com/Ordluks/template-monomer-app#readme>
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+
+dependencies:
+- base >= 4.7 && < 5
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  default-extensions:
+  - OverloadedStrings
+  source-dirs: src
+  dependencies:
+  - monomer >= 1.6.0.1
+  - lens
+  - text
+
+executables:
+  template-monomer-app-exe:
+    main:                Main.hs
+    source-dirs:         app
+    # Disabled because GL context error
+    # ghc-options:
+    # - -threaded
+    # - -rtsopts
+    # - -with-rtsopts=-N
+    dependencies:
+    - template-monomer-app
+
+tests:
+  template-monomer-app-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - template-monomer-app
