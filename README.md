@@ -15,13 +15,13 @@ You are not need to edit `.cabal` file. Stack will use `project.yaml` to automat
 
 ## Modules structure
 
-`Types` - reimports for all inner modules
-`Types.App` - main application datatypes and models
-`Types.<module-name>` - some of your datatypes and models
+- `Types` - reimports for all inner modules
+- `Types.App` - main application datatypes and models
+- `Types.<module-name>` - some of your datatypes and models
 
-`GUI` - application GUI builder
-`GUI.<module-name>` - some of your composites
-`GUI.Widgets.<module-name>` - some of your widgets
+- `GUI` - application GUI builder
+- `GUI.<module-name>` - some of your composites
+- `GUI.Widgets.<module-name>` - some of your widgets
 
-`App` - main application logic and application entry
-`<module-name>` - some of your application logics
+- `App` - main application logic and application entry
+- `<module-name>` - some of your application logics
