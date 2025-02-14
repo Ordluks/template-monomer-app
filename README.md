@@ -2,7 +2,7 @@
 
 You can use this template repository to simply start new application project in Haskell using Monomer GUI library.
 
-You are not need to edit `.cabal` file. Stack will use `project.yaml` to automatically generate it.
+You are not need to edit `.cabal` file. Stack will use `package.yaml` to automatically generate it.
 
 ## Project structure
 
